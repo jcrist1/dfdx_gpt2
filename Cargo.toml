@@ -1,0 +1,26 @@
+[package]
+name = "lang-swarm-worker-dfdx"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.71"
+bincode = "1.3.3"
+config = "0.13.3"
+dfdx = {path = "../dfdx", features = ["safetensors"]}
+futures = "0.3.28"
+futures-util = "0.3.28"
+gzp = "0.11.3"
+memmap = "0.7.0"
+num-traits = "0.2.15"
+safetensors = "0.3.1"
+serde = { version = "1.0.160", features = ["derive"] }
+serde_json = "1.0.96"
+serde_yaml = "0.9.21"
+thiserror = "1.0.40"
+tokenizers = { version = "0.13.3", default-features = false, features = ["onig"]}
+
+[dev-dependencies]
+pyo3 = {version =  "0.18.3"}
